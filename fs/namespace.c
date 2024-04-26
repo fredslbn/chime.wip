@@ -1636,8 +1636,7 @@ static inline bool may_mandlock(void)
 	return capable(CAP_SYS_ADMIN);
 }
 
-// ksu umount module
-// add path umount implementation
+// ksu path_umount
 static int can_umount(const struct path *path, int flags)
 {
 	struct mount *mnt = real_mount(path->mnt);
